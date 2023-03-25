@@ -38,15 +38,9 @@
 
 | Issue  | Solution |
 | ------------- | ------------- |
-| Original idea of using time delay between microphones was not possible due to jetson limitations (discussed further on next slide)
-  | Decided to use volume of sound signals instead of microphone timing in order to determine direction of audio.
-  |
-| Sound from car’s movement, such as servo motors and wheels, were causing our robot to turn randomly.
-  | Created wings out of cardboard which lifted and spread out the left/right microphones away from the wheels.
-  |
-| Random/sudden loud noises from the environment made the car turn in wrong directions, even when originally was moving correctly towards audio source.
-  | Averaged the audio signals of each microphone over the last few ticks using a buffer in order to reduce impact of outlier noises. Required tuning, as a small buffer would not remove outliers as effectively while a large buffer reduced reaction time of robot’s movement when direction of audio actually changed
-  |
+| Original idea of using time delay between microphones was not possible due to jetson limitations | Decided to use volume of sound signals instead of microphone timing in order to determine direction of audio. |
+| Sound from car’s movement, such as servo motors and wheels, were causing our robot to turn randomly.| Created wings out of cardboard which lifted and spread out the left/right microphones away from the wheels.|
+| Random/sudden loud noises from the environment made the car turn in wrong directions, even when originally was moving correctly towards audio source.| Averaged the audio signals of each microphone over the last few ticks using a buffer in order to reduce impact of outlier noises. Required tuning, as a small buffer would not remove outliers as effectively while a large buffer reduced reaction time of robot’s movement when direction of audio actually changed |
 
 ## What did not work
 
